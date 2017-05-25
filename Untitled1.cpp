@@ -1,11 +1,11 @@
-//À±³â ÇÁ·Î±×·¥
+//ìœ¤ë…„ í”„ë¡œê·¸ë¨
 #include<stdio.h>
 
-int mian()
+int main()
 {
 	int year,result;
 	
-	printf("¿¬µµ¸¦ ÀÔ·ÂÇÏ½Ã¿À:");
+	printf("ì—°ë„ë¥¼ ì…ë ¥í•˜ì‹œì˜¤:");
 	scanf("%d",&year);
 	
 	result=((year%4==0))&&(year%100!=0)||(year%400==0);
