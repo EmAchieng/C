@@ -1,0 +1,40 @@
+
+#include <stdio.h>
+
+
+
+struct {
+	int x;
+	int y;
+
+};
+
+struct rect {
+	struct point p1;
+	struct point p2;
+
+};
+
+int main(void)
+{
+	struct rect r;
+	int w, h, area, peri;
+
+
+	printf("왼쪽 상담ㄴ의 죄표를 입력하세요:");
+	scanf_s("%d %d", &r.p1.x, &r.p1.y);
+
+	printf("오름쪽 한단의 죄표를 입력하세요:");
+	scanf_s("%d %d", &r.p2.x, &r.p2.y);
+
+	w = r.p2.x - r.p1.x;
+	h = r.p2.y - r.p1.y;
+
+	area = w *h;
+	peri = 2 * w + 2 * h;
+	printf("면적을 %d이고 돌레는 %d입니다.\n", area, peri);
+
+	return 0;
+
+
+}
