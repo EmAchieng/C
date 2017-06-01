@@ -1,0 +1,37 @@
+
+#include <stdio.h>
+
+typedef struct point {
+	int x;
+	int y;
+
+} POINT;
+
+POINT translate (POINT P, POINT delta);
+
+int main(void)
+
+{
+	POINT P = { 2,3 };
+	POINT delta = { 10, 10 };
+	POINT result;
+
+	result = translate(P, delta);
+	printf(" 새로운 점의 죄표는(%d, %d)입니다.\n", result.x, result.y);
+	return 0;
+
+
+
+}
+
+
+POINT translate(POINT P, POINT delta)
+{
+	POINT new_P;
+
+	new_P.x = P.x + delta.x;
+	new_P.y = P.y + delta.y;
+	return new_P;
+
+
+}
