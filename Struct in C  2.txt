@@ -1,0 +1,35 @@
+
+#include <stdio.h>
+#include <math.h>
+
+
+
+struct {
+	int x;
+	int y;
+
+};
+
+int main(void)
+{
+	struct point p1, p2;
+	int xdiff, ydiff;
+	double dist;
+
+	printf("점의 죄표를 입력하세요(x,y):");
+	scanf("%d %d", &p1.x, &p1.y);
+
+	printf("점의 죄표를 입력하세요(x,y):");
+	scanf("%d %d", &p1.x, &p1.y);
+
+	x.diff = p1.x - p2.x;
+	ydiff = p1.x - p2.y;
+
+	dist = sqrt(xdiff *xdiff + ydiff *ydiff);
+
+	printf("두 점사이의 거리는  %f입니다.\n", dist);
+
+	return 0;
+
+
+}
