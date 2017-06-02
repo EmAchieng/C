@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct ListNode
+{
+   int data;
+   struct ListNode *link;
+}; struct ListNode *head;
+
+void addNode(int data)
+{
+   struct ListNode *p = head;
+   struct ListNode *newnode = (struct ListNode*)malloc(sizeof(struct ListNode));
+
+   newnode->data = data;
+
+   while (p->link)
+   {
+      if (p->link->data > data)
+         break;
+      p = p->link;
+   }
+   newnode->link = p->link;
+   p->link = newnode;
+}
+
+void display()
+{
+   struct ListNode *p = head->link;
+   while (p)
+   {
+      printf("%d->", p->data);
+      p = p->link;
+   }
+   printf("NULL\n");
+}
+
+int main()
+{
+   int list[6];
+
+   head = (struct ListNode*)malloc(sizeof(struct ListNode));
+   head->link = NULL;
+
+   scanf_s("%d %d %d %d %d %d", &list[0], &list[1], &list[2], &list[3], &list[4], &list[5]);
+
+   for (int i = 0; i < 6; i++) {
+      addNode(list[i]);
+   }
+
+   display();
+   return 0;
+}
