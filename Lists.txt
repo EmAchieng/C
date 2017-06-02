@@ -1,0 +1,29 @@
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+   //int A[5] = { 0,1,2,3,4 };
+   //int *p, q, r;
+   //q = A[0];
+   //r = A[0] + 1;
+   //printf("%ld \n", r - q);
+   //p = A;
+   //printf("\n %d, %d, %d\n", *(p + 1), *(p++), *p);
+
+   int arr[5] = { 1,2,3,4,5 };
+   int *p = arr;
+   int temp;
+   for (int i = 0; i < 4-i; i++) {
+      temp = p[i];
+      p[i] = p[4 - i];
+      p[4 - i] = temp;
+   }
+   for (int j = 0; j < 5; j++)
+      printf("%d", p[j]);
+   printf("\n%d , %d", *p, ++(*p++));
+
+   system("pause");
+   return 0;
+}
